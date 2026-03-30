@@ -1,0 +1,9 @@
+{
+  "name": "celestial-allure",
+  "version": "1.0.0",
+  "description": "Celestial Allure Luxury Fragrance Showroom",
+  "scripts": {
+    "start": "npx serve . --listen 3000",
+    "build": "echo No build step required for static HTML project"
+  }
+}
