@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Celestial Allure — The Fragrance Written in the Stars</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap"
+        rel="stylesheet" />
+    <!-- PRELOAD VIDEO -->
+    <link rel="preload" as="video" href="animations/perfume_reveal.mp4" type="video/mp4">
+    <!-- END PRELOAD -->
+</head>
+
+<body>
+
+    <!-- ═══ PARTICLES CANVAS ═══ -->
+    <canvas id="starsCanvas"></canvas>
+
+    <!-- ═══ NAVIGATION ═══ -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">✦ CELESTIAL ALLURE</a>
+            <ul class="nav-links">
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#spotlight">Spotlight</a></li>
+                <li><a href="#philosophy">Story</a></li>
+                <li><a href="#why">Our Promise</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="nav-icon" aria-label="Search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.35-4.35" />
+                    </svg>
+                </button>
+                <button class="nav-icon" aria-label="Cart">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══ HERO ═══ -->
+    <section id="hero">
+        <div class="hero-bg">
+            <div class="nebula n1"></div>
+            <div class="nebula n2"></div>
+            <div class="nebula n3"></div>
+        </div>
+        <div class="hero-bottle-wrap">
+            <div class="hero-bottle">
+                <div class="bottle-glow"></div>
+                <video id="hero-video" src="animations/perfume_reveal.mp4" autoplay loop muted playsinline
+                    style="width: 100%; height: auto; max-width: 550px; max-height: 75vh; position: relative; z-index: 2; filter: drop-shadow(0 0 40px rgba(201,168,76,0.3)); transform: scale(1.1); object-fit: contain; background: transparent;"></video>
+            </div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-overline">✦ &nbsp; EST. 2024 &nbsp; ✦</p>
+            <h1 class="hero-headline">The Fragrance<br /><em>Written in the Stars</em></h1>
+            <p class="hero-sub">Indulge in a scent crafted to captivate, designed to linger,<br />and made to define
+                your
+                presence.</p>
+            <div class="hero-tags">
+                <span class="tag">Unisex</span>
+                <span class="tag">Luxury</span>
+                <span class="tag">8–12 Hour Longevity</span>
+            </div>
+            <a href="#collection" class="btn-gold">
+                <span>Shop the Collection</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+        <div class="scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ═══ BRAND PHILOSOPHY ═══ -->
+    <section id="philosophy">
+        <div class="container">
+            <div class="philosophy-header">
+                <p class="section-label">✦ Our Story</p>
+                <h2 class="section-title">Celestial Allure is not just<br />a perfume — it's an <em>experience</em></h2>
+                <p class="philosophy-desc">Born from the cosmos and crafted for those who dare to be unforgettable. Each
+                    bottle
+                    holds a universe of emotion, mystery, and desire — a fragrance that transcends gender, transcends
+                    time.</p>
+            </div>
+            <div class="philosophy-pillars">
+                <div class="pillar" data-reveal>
+                    <div class="pillar-icon">✦</div>
+                    <h3>Sophistication</h3>
+                    <p>Every note is selected by master perfumers with decades of artisanal craft. Complexity that
+                        unfolds like a
+                        story.</p>
+                </div>
+                <div class="pillar" data-reveal>
+                    <div class="pillar-icon">✦</div>
+                    <h3>Confidence</h3>
+                    <p>Wear it and feel the room shift. A fragrance bold enough to announce your arrival before you
+                        speak.</p>
+                </div>
+                <div class="pillar" data-reveal>
+                    <div class="pillar-icon">✦</div>
+                    <h3>Irresistible Charm</h3>
+                    <p>The magnetic warmth that lingers long after you leave — an invisible signature, utterly yours.
+                    </p>
+                </div>
+            </div>
+            <div class="philosophy-cosmos">
+                <div class="cosmos-stat"><span class="cs-num">100%</span><span class="cs-label">Ethically Sourced</span>
+                </div>
+                <div class="cosmos-divider"></div>
+                <div class="cosmos-stat"><span class="cs-num">12h</span><span class="cs-label">Lasting Sillage</span>
+                </div>
+                <div class="cosmos-divider"></div>
+                <div class="cosmos-stat"><span class="cs-num">Unisex</span><span class="cs-label">For All Souls</span>
+                </div>
+                <div class="cosmos-divider"></div>
+                <div class="cosmos-stat"><span class="cs-num">✦</span><span class="cs-label">Cruelty Free</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SIGNATURE COLLECTION ═══ -->
+    <section id="collection">
+        <div class="container">
+            <p class="section-label">✦ The Collection</p>
+            <h2 class="section-title">The Signature <em>Collection</em></h2>
+            <p class="section-sub">Three celestial journeys. One extraordinary house.</p>
+        </div>
+        <div class="collection-grid">
+
+            <div class="product-card" data-scent="golden">
+                <div class="card-occasion"><span class="occ night">Night</span><span class="occ day">Day</span></div>
+                <div class="card-visual golden-visual">
+                    <div class="card-bottle-glow golden-glow"></div>
+                    <div class="card-bottle-icon" style="overflow:hidden; border-radius:8px;">
+                        <img src="images/midnight-mist.jpg"
+                            style="width:100%; height:100%; object-fit:contain; object-position: center;"
+                            alt="Golden Dusk">
+                    </div>
+                    <div class="card-notes-hover">
+                        <p class="notes-label">Key Notes</p>
+                        <div class="note-chips">
+                            <span>🌿 Oud</span><span>🌸 Saffron</span><span>🍊 Amber</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-name">Golden Dusk</h3>
+                    <p class="card-desc">Warm, opulent, and commanding. The scent of golden hour distilled into a
+                        bottle.</p>
+                    <div class="card-footer">
+                        <span class="card-price">₹4,299</span>
+                        <button class="btn-card">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card featured-card" data-scent="midnight">
+                <div class="card-badge">Best Seller</div>
+                <div class="card-occasion"><span class="occ night">Night</span></div>
+                <div class="card-visual midnight-visual">
+                    <div class="card-bottle-glow midnight-glow"></div>
+                    <div class="card-bottle-icon" style="overflow:hidden; border-radius:8px;">
+                        <img src="images/golden-dusk.jpg"
+                            style="width:100%; height:100%; object-fit:contain; object-position: center;"
+                            alt="Midnight Mist">
+                    </div>
+                    <div class="card-notes-hover">
+                        <p class="notes-label">Key Notes</p>
+                        <div class="note-chips midnight-chips">
+                            <span>🌊 Marine</span><span>💜 Lavender</span><span>❄️ Musk</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-name">Midnight Mist</h3>
+                    <p class="card-desc">Cool, mysterious, and magnetic. A nocturnal voyage through ocean air and
+                        midnight blooms.
+                    </p>
+                    <div class="card-footer">
+                        <span class="card-price">₹4,799</span>
+                        <button class="btn-card">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-scent="rose">
+                <div class="card-occasion"><span class="occ day">Day</span></div>
+                <div class="card-visual blossom-visual">
+                    <div class="card-bottle-glow blossom-glow"></div>
+                    <div class="card-bottle-icon" style="overflow:hidden; border-radius:8px;">
+                        <img src="images/rose-aura.jpg"
+                            style="width:100%; height:100%; object-fit:contain; object-position: center;"
+                            alt="Rose Aura">
+                    </div>
+                    <div class="card-notes-hover">
+                        <p class="notes-label">Key Notes</p>
+                        <div class="note-chips blossom-chips">
+                            <span>🌺 Peony</span><span>🌹 Rose</span><span>🍑 Peach</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-name">Rose Aura</h3>
+                    <p class="card-desc">Delicate yet unforgettable. A bouquet of rare florals blooming at the golden
+                        hour.</p>
+                    <div class="card-footer">
+                        <span class="card-price">₹3,999</span>
+                        <button class="btn-card">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══ SCENT SPOTLIGHT ═══ -->
+    <section id="spotlight">
+        <div class="spotlight-split">
+            <div class="spotlight-visual">
+                <img src="images/ruby-intense.jpg" alt="Ruby Intense Spotlight"
+                    style="width:100%; height:auto; max-height:80vh; object-fit:contain; background:#000; border-radius:12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+            </div>
+            <div class="spotlight-info">
+                <p class="section-label">✦ Featured Scent</p>
+                <h2 class="section-title" style="font-size:clamp(2rem,4vw,3.2rem)"><em>Ruby
+                        Intense</em></h2>
+                <p class="spotlight-desc">The crown jewel of the house. A duality of softness and fire — for every mood,
+                    every
+                    moment, every soul.</p>
+                <div class="occasion-tags">
+                    <span class="occ-tag night-tag">Night Occasion</span>
+                    <span class="occ-tag day-tag">Day Occasion</span>
+                    <span class="occ-tag uni-tag">✦ Unisex</span>
+                </div>
+                <a href="#" class="btn-gold" style="display:inline-flex;margin-top:2rem">
+                    <span>Discover More</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+            <div class="spotlight-pyramid-wrap">
+                <h3 class="pyramid-title">Olfactive Pyramid</h3>
+                <div class="pyramid">
+                    <div class="pyramid-layer top-layer">
+                        <div class="layer-label">Top Notes</div>
+                        <div class="layer-notes">
+                            <div class="pnote">
+                                <span class="pnote-icon">🫚</span>
+                                <span>Pink Pepper</span>
+                            </div>
+                            <div class="pnote">
+                                <span class="pnote-icon">🍋</span>
+                                <span>Bergamot</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pyramid-layer heart-layer">
+                        <div class="layer-label">Heart Notes</div>
+                        <div class="layer-notes">
+                            <div class="pnote">
+                                <span class="pnote-icon">🌹</span>
+                                <span>Rose</span>
+                            </div>
+                            <div class="pnote">
+                                <span class="pnote-icon">🌿</span>
+                                <span>Cinnamon</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pyramid-layer base-layer">
+                        <div class="layer-label">Base Notes</div>
+                        <div class="layer-notes">
+                            <div class="pnote">
+                                <span class="pnote-icon">🌾</span>
+                                <span>Amber</span>
+                            </div>
+                            <div class="pnote">
+                                <span class="pnote-icon">🍦</span>
+                                <span>Vanilla</span>
+                            </div>
+                            <div class="pnote">
+                                <span class="pnote-icon">🪨</span>
+                                <span>Musk</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sillage-bar-wrap">
+                    <span class="sb-label">Sillage Strength</span>
+                    <div class="sillage-bar">
+                        <div class="sillage-fill"></div>
+                    </div>
+                    <span class="sb-val">9/10</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ WHY CHOOSE US ═══ -->
+    <section id="why">
+        <div class="container">
+            <p class="section-label">✦ Our Promise</p>
+            <h2 class="section-title">Crafted Without <em>Compromise</em></h2>
+            <div class="why-grid">
+                <div class="why-card" data-reveal>
+                    <div class="why-icon">⏳</div>
+                    <h4>8–12 Hour Longevity</h4>
+                    <p>Long-lasting formula tested across skin types and climates. Your scent, all day.</p>
+                </div>
+                <div class="why-card" data-reveal>
+                    <div class="why-icon">🌿</div>
+                    <h4>Ethically Sourced</h4>
+                    <p>Every ingredient traceable to responsible farms and distilleries worldwide.</p>
+                </div>
+                <div class="why-card" data-reveal>
+                    <div class="why-icon">✦</div>
+                    <h4>Master Perfumers</h4>
+                    <p>Composed by artisans with 20+ years of olfactive expertise in Grasse, France.</p>
+                </div>
+                <div class="why-card" data-reveal>
+                    <div class="why-icon">🚫</div>
+                    <h4>Cruelty Free</h4>
+                    <p>Never tested on animals. Certified by leading international fragrance bodies.</p>
+                </div>
+                <div class="why-card" data-reveal>
+                    <div class="why-icon">⚗️</div>
+                    <h4>High-Concentration</h4>
+                    <p>30%+ fragrance oil — Eau de Parfum Intense grade. More scent, less filler.</p>
+                </div>
+                <div class="why-card" data-reveal>
+                    <div class="why-icon">♾️</div>
+                    <h4>for him/for her</h4>
+                    <p>Crafted to transcend gender norms. Beauty that belongs to every soul.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer id="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <p class="footer-logo">✦ CELESTIAL ALLURE</p>
+                <p class="footer-tagline">The Fragrance Written in the Stars</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Collection</a>
+                <a href="#">About</a>
+                <a href="#">Stockists</a>
+                <a href="#">Contact</a>
+            </div>
+            <p class="footer-copy">© 2024 Celestial Allure. All rights reserved. Unisex Luxury Fragrance.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
